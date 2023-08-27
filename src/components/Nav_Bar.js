@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -8,10 +8,11 @@ import {
 import { BsFillCartFill, BsPerson } from "react-icons/bs";
 
 const Nav_Bar = () => {
+  const { Side_Nav, Set_Side_Nav } = useState(false);
   return (
     <div className="max-w-[1520px] mx-auto flex justify-between items-center p-4">
       <div className="flex items-center">
-        <div className="cursor-pointer">
+        <div onClick={() => Set_Side_Nav(!Side_Nav)} className="cursor-pointer">
           <AiOutlineMenu size={25} />
         </div>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">

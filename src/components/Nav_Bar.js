@@ -5,10 +5,11 @@ import {
   AiOutlineClose,
   AiFillTag,
 } from "react-icons/ai";
+import { BsFillCartFill, BsPerson } from "react-icons/bs";
 
 const Nav_Bar = () => {
   return (
-    <div className="max-w-[1520] mx-auto flex justify-between items-center p-4">
+    <div className="max-w-[1520px] mx-auto flex justify-between items-center p-4">
       <div className="flex items-center">
         <div className="cursor-pointer">
           <AiOutlineMenu size={25} />
@@ -27,12 +28,13 @@ const Nav_Bar = () => {
       <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
         <AiOutlineSearch size={25} />
         <input
-          className="bg-transparent p-2 focus:outline-none w-full"
+          className="bg-gray-200 p-2 focus:outline-none w-full"
           type="text"
           placeholder="Search meals"
         />
       </div>
-      <button className="hidden bg-orange-700 text-white md:flex py-2 rounded-full">
+      <button className="hidden lg:flex md:flex  items-center bg-orange-700 text-white   py-2 rounded-full">
+        <BsFillCartFill size={20} />
         Cart
       </button>
     </div>
